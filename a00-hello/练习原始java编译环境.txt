@@ -1,0 +1,28 @@
+【练习最原始java程序编写，编译和打包过程】
+
+1. 编译和运行一个最简单的java程序
+javac  Hello.java
+java Hello
+
+2.如果多写一个 Hello2.java，现在有2个程序，进行编译？
+javac  Hello.java Hello2.java 
+
+3. java对象需要放置到不同目录package
+javac  Hello.java com/Hello2.java 
+java    com.Hello2
+
+4. 如何打包发布给别人使用？
+jar cvf hello.jar Hello.class  com/Hello2.class
+
+5.客户运行
+java -cp hello.jar  Hello
+java -cp hello.jar  com.Hello2
+
+
+
+
+
+
+
+
+//其它引入多个jar  java -cp lib\log4j-1.2.14.jar;hello.jar Hello
